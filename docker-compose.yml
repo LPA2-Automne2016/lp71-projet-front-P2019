@@ -1,0 +1,13 @@
+version: '2'
+services:
+  angular:
+    build:
+      context: .
+      dockerfile: Dockerfile-dev
+    command: "npm run start"
+    volumes:
+      - ".:/app"
+     # - /app/node_modules
+      # https://stackoverflow.com/questions/29181032/add-a-volume-to-docker-but-exclude-a-sub-folder
+    ports:
+      - "4200:4200"

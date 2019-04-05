@@ -1,0 +1,5 @@
+FROM node
+RUN npm i -g @angular/cli@6.2.9 ngx-i18nsupport@0.17.1
+WORKDIR /app
+#ADD package.json .
+#RUN npm i
